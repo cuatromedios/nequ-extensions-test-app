@@ -9,8 +9,8 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
-    "invoke": "quasar ext invoke nequ",
-    "uninvoke": "quasar ext iunnvoke nequ",
+    "invoke": "quasar ext invoke nequ-components",
+    "uninvoke": "quasar ext iunnvoke nequ-components",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
