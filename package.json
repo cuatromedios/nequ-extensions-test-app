@@ -1,7 +1,7 @@
 {
-  "name": "nequ-extension-test-app",
+  "name": "nequ-extensions-test-app",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
+  "description": "A Quasar Framework app for testing NeQu extensions",
   "productName": "Quasar App",
   "cordovaId": "",
   "capacitorId": "",
@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@quasar/app": "^1.0.0",
-    "quasar-app-extension-nequ": "file:../nequ-extension"
+    "quasar-app-extension-nequ-components": "file:../quasar-app-extension-nequ-components"
   },
   "engines": {
     "node": ">= 10.18.1",
