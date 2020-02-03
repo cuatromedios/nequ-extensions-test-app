@@ -57,6 +57,12 @@ export default {
       leftDrawerOpen: false,
       essentialLinks: [
         {
+          title: 'Input',
+          caption: 'Generic input',
+          icon: 'attach_money',
+          link: 'input'
+        },
+        {
           title: 'Currency Input',
           caption: 'Numeric input for money values',
           icon: 'attach_money',

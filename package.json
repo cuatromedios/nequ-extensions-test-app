@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "quasar dev",
     "invoke": "quasar ext invoke nequ-components",
-    "uninvoke": "quasar ext iunnvoke nequ-components",
+    "uninvoke": "quasar ext uninvoke nequ-components",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
