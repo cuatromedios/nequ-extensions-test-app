@@ -3,7 +3,7 @@
     <h1>Input</h1>
     <h2>Default</h2>
     Outlined by default
-    <nq-input disabled readonly />
+    <nq-input />
     <h2>Inherit scopes</h2>
     <nq-input>
       <template v-slot:append>
@@ -23,6 +23,6 @@
 
 <script>
 export default {
-  name: 'Currency'
+  name: 'Input'
 }
 </script>

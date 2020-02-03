@@ -63,7 +63,13 @@ export default {
           link: 'input'
         },
         {
-          title: 'Currency Input',
+          title: 'Input Number',
+          caption: 'Number input',
+          icon: 'attach_money',
+          link: 'number'
+        },
+        {
+          title: 'Input Currency',
           caption: 'Numeric input for money values',
           icon: 'attach_money',
           link: 'currency'
