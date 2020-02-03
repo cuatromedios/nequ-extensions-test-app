@@ -1,7 +1,11 @@
 <template>
   <q-page class="">
-    <h3>Currency</h3>
-    <nq-currency />
+    <h1>Currency</h1>
+    <ul>
+      <li>Auto $ prepend</li>
+    </ul>
+    <nq-input-currency symbol="MXN$" />
+    <nq-input-currency symbol="€" />
   </q-page>
 </template>
 
