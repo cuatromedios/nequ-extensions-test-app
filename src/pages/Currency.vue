@@ -1,16 +1,38 @@
 <template>
   <q-page class="">
-    <h1>Currency</h1>
+    <h1>&lt;nq-currency&gt;</h1>
+    <h2>Features</h2>
     <ul>
-      <li>Auto $ prepend</li>
+      <li>Auto pattern to 0,0.00</li>
     </ul>
-    <nq-input-currency symbol="MXN$" />
-    <nq-input-currency symbol="€" />
+    <h2>Attributes</h2>
+    <ul>
+      <li><code>symbol</code> $ by default</li>
+      <li><code>currency</code> Appends a currency for example USD</li>
+    </ul>
+    <h3>Model: {{ theModel }}</h3>
+    <p>
+      <nq-input-currency v-model="theModel" />
+    </p>
+    <p>
+      <nq-input-currency symbol="$" currency="MXN" v-model="theModel" />
+    </p>
+    <p>
+      <nq-input-currency currency="USD" v-model="theModel" />
+    </p>
+    <p>
+      <nq-input-currency symbol="€" currency="EUR" v-model="theModel" />
+    </p>
   </q-page>
 </template>
 
 <script>
 export default {
-  name: 'Currency'
+  name: 'Currency',
+  data () {
+    return {
+      theModel: 12345.678
+    }
+  }
 }
 </script>
