@@ -1,6 +1,6 @@
 <template>
   <q-page class="">
-    <h1>&lt;nq-number&gt;</h1>
+    <h1>&lt;nq-input-number&gt;</h1>
     <h2>Features</h2>
     <ul>
       <li>Auto right aligned</li>

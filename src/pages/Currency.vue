@@ -1,6 +1,6 @@
 <template>
   <q-page class="">
-    <h1>&lt;nq-currency&gt;</h1>
+    <h1>&lt;nq-input-currency&gt;</h1>
     <h2>Features</h2>
     <ul>
       <li>Auto pattern to 0,0.00</li>
