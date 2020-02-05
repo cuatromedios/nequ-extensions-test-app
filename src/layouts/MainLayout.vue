@@ -59,20 +59,26 @@ export default {
         {
           title: 'Input',
           caption: 'Generic input',
-          icon: 'attach_money',
+          icon: 'code',
           link: 'input'
         },
         {
           title: 'Input Number',
           caption: 'Number input',
-          icon: 'attach_money',
+          icon: 'code',
           link: 'number'
         },
         {
           title: 'Input Currency',
           caption: 'Numeric input for money values',
-          icon: 'attach_money',
+          icon: 'code',
           link: 'currency'
+        },
+        {
+          title: 'Input Percentage',
+          caption: 'Percentage input',
+          icon: 'code',
+          link: 'percentage'
         }
       ]
     }

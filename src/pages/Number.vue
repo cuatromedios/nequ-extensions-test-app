@@ -8,6 +8,8 @@
     <h2>Attributes</h2>
     <ul>
       <li><code>pattern</code> Any pattern of NumeralJS: http://numeraljs.com/ for example 0,0.00</li>
+      <li><code>prefix</code> Any string to put before the number</li>
+      <li><code>sufix</code> Any string to put after the number</li>
     </ul>
     <h3>Emitted Model: {{ theModel }}</h3>
     <p>
@@ -24,6 +26,9 @@
     </p>
     <p>
       <nq-input-number v-model="theModel" pattern="0 b" />
+    </p>
+    <p>
+      <nq-input-number v-model="theModel" before="! " pattern="0" />
     </p>
   </q-page>
 </template>
