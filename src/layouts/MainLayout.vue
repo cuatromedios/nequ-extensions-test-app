@@ -79,6 +79,12 @@ export default {
           caption: 'Percentage input',
           icon: 'code',
           link: 'percentage'
+        },
+        {
+          title: 'Select',
+          caption: 'Select',
+          icon: 'code',
+          link: 'select'
         }
       ]
     }
