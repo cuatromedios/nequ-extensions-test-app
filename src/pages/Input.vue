@@ -30,6 +30,22 @@
         </template>
       </nq-input>
     </p>
+    <p>
+      <nq-input v-model="theModel" label="Password" type="password" >
+      </nq-input>
+    </p>
+    <p>
+      <nq-input v-model="theModel" label="Disabled" disabled />
+    </p>
+    <p>
+      <nq-input v-model="theModel" label="Readonly" readonly />
+    </p>
+    <p>
+      <nq-input v-model="theModel" label="Disabled and readonly" disabled readonly />
+    </p>
+    <p>
+      <nq-input v-model="theModel" label="Borderless" readonly borderless/>
+    </p>
   </q-page>
 </template>
 
