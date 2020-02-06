@@ -13,7 +13,10 @@
     </ul>
     <p>Model: <code>{{ theModel }}</code></p>
     <p>
-      <nq-select label="With emit-value" v-model="theModel" :options="options" option-label="name" option-value="id" emit-value/>
+      <nq-select label="With emit-value" v-model="theModel" :options="options" option-label="name" option-value="id" emit-value />
+    </p>
+    <p>
+      <nq-select label="With emit-value and map-options" v-model="theModel" :options="options" option-label="name" option-value="id" emit-value map-options />
     </p>
     <p>
       <nq-select label="Without emit-value" v-model="theModel" :options="options" option-label="name" option-value="id"/>
