@@ -12,6 +12,7 @@
 
     <div class="q-gutter-md column" style="max-width: 300px">
       <nq-field
+        label="Select a range"
         :hint="`Slider with value ${ slider }`"
         :value="slider"
         @input="val => (val === null && (slider = 50))"
