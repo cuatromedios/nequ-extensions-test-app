@@ -62,8 +62,14 @@ export default {
       leftDrawerOpen: false,
       components: [
         {
+          title: 'Field',
+          caption: 'Generic field wrapper',
+          icon: 'code',
+          link: 'field'
+        },
+        {
           title: 'Input',
-          caption: 'Generic input',
+          caption: 'Text input',
           icon: 'code',
           link: 'input'
         },
