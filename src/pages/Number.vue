@@ -11,7 +11,7 @@
       <li><code>prefix</code> Any string to put before the number</li>
       <li><code>sufix</code> Any string to put after the number</li>
     </ul>
-    <h3>Emitted Model: {{ theModel }}</h3>
+    <h3>Emitted Model: <code>{{ theModel }}</code></h3>
     <p>
       <nq-input-number v-model="theModel" pattern="0,0" />
     </p>

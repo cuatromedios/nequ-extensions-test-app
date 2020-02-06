@@ -10,7 +10,7 @@
       <li><code>symbol</code> $ by default</li>
       <li><code>currency</code> Appends a currency for example USD</li>
     </ul>
-    <h3>Model: {{ theModel }}</h3>
+    <h3>Model: <code>{{ theModel }}</code></h3>
     <p>
       <nq-input-currency v-model="theModel" />
     </p>

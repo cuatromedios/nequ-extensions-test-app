@@ -9,7 +9,7 @@
     <ul>
       <li><code>pattern</code> Any pattern of NumeralJS: http://numeraljs.com/ 0,0 by default</li>
     </ul>
-    <h3>Model: {{ theModel }}</h3>
+    <h3>Model: <code>{{ theModel }}</code></h3>
     <p>
       <nq-input-percentage v-model="theModel" />
     </p>

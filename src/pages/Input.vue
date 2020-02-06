@@ -9,7 +9,7 @@
     <ul>
       <li>Inherits any quasar &lt;q-input&gt; attributes and slots</li>
     </ul>
-    <p>Model: {{ theModel }}</p>
+    <p>Model: <code>{{ theModel }}</code></p>
     <p>
       <nq-input v-model="theModel" />
     </p>
