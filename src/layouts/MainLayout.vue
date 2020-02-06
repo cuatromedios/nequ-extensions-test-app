@@ -28,11 +28,16 @@
       <q-list>
         <q-item-label header class="text-grey-8">Components</q-item-label>
         <EssentialLink
-          v-for="link in essentialLinks"
+          v-for="link in components"
           :key="link.title"
           v-bind="link"
         />
-        <q-item-label header class="text-grey-8">Mixins</q-item-label>
+        <q-item-label header class="text-grey-8">Forms</q-item-label>
+        <EssentialLink
+          v-for="link in forms"
+          :key="link.title"
+          v-bind="link"
+        />
       </q-list>
     </q-drawer>
 
@@ -55,7 +60,7 @@ export default {
   data () {
     return {
       leftDrawerOpen: false,
-      essentialLinks: [
+      components: [
         {
           title: 'Input',
           caption: 'Generic input',
@@ -85,6 +90,14 @@ export default {
           caption: 'Select',
           icon: 'code',
           link: 'select'
+        }
+      ],
+      forms: [
+        {
+          title: 'Form',
+          caption: 'Generic form',
+          icon: 'code',
+          link: 'form'
         }
       ]
     }
