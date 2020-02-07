@@ -6,7 +6,7 @@
   "cordovaId": "",
   "capacitorId": "",
   "author": "Ramses <ramses@cuatromedios.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "quasar dev",
     "invoke": "quasar ext invoke nequ-components",
