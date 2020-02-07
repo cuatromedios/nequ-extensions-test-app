@@ -10,16 +10,20 @@
   "scripts": {
     "dev": "quasar dev",
     "invoke": "quasar ext invoke nequ-components",
+    "invoke-vuelidate": "quasar ext invoke vuelidate-rules",
     "uninvoke": "quasar ext uninvoke nequ-components",
+    "uninvoke-vuelidate": "quasar ext uninvoke vuelidate-rules",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
-    "quasar": "^1.0.0"
+    "quasar": "^1.0.0",
+    "vuelidate": "^0.7.5"
   },
   "devDependencies": {
     "@quasar/app": "^1.0.0",
-    "quasar-app-extension-nequ-components": "file:../quasar-app-extension-nequ-components"
+    "quasar-app-extension-nequ-components": "file:../quasar-app-extension-nequ-components",
+    "quasar-app-extension-vuelidate-rules": "file:../quasar-app-extension-vuelidate-rules"
   },
   "engines": {
     "node": ">= 10.18.1",

@@ -46,30 +46,50 @@
         v-model="form.name"
         label="Your name *"
         hint="Name and surname"
-        lazy-rules
-        :rules="[ val => val && val.length > 0 || 'Please type something']"
+        :rules="[
+          val => $rules.required(val) || 'Your name is required',
+          val => $rules.alpha(val) || 'Your name should not have numbers',
+          val => $rules.minLength(3)(val) || 'Your name should have at least 3 letters',
+          val => $rules.maxLength(10)(val) || 'Your name should not be larger than 10 letters'
+        ]"
+      />
+      <nq-input
+        class="col-12"
+        v-model="form.email"
+        type="email"
+        label="Your email *"
+        :rules="[
+          val => $rules.required(val) || 'An email is required',
+          val => $rules.email(val) || 'Please enter a valid email address'
+        ]"
       />
       <nq-input-number
         class="col-4"
         v-model="form.age"
         label="Your age *"
-        lazy-rules
         :rules="[
-        val => val !== null && val !== '' || 'Please type your age',
-        val => val > 0 && val < 100 || 'Please type a real age'
-      ]"
+          val => $rules.required(val) || 'Your age is required',
+          val => $rules.between(10,100)(val) || 'Please enter your real age'
+        ]"
       />
       <nq-input-number
-        class="col-8"
+        class="col-4"
         v-model="form.age"
         label="Your age *"
-        lazy-rules
         :rules="[
-        val => val !== null && val !== '' || 'Please type your age',
-        val => val > 0 && val < 100 || 'Please type a real age'
-      ]"
+          val => $rules.or($rules.between(10,15), $rules.between(20,25))(val) || 'Your age has to be between 10 and 15 or 20 and 25',
+        ]"
       />
-      <q-toggle v-model="form.accept" label="I accept the license and terms" />
+      <nq-field
+        :value="form.accept"
+        label="Please read the license"
+        stack-label
+        :rules="[
+          val => $rules.isTrue(val) || 'Please set value to maximum 60'
+        ]"
+      >
+        <q-toggle v-model="form.accept" label="I accept the license and terms" />
+      </nq-field>
     </nq-form>
 
   </q-page>
@@ -77,6 +97,7 @@
 
 <script>
 import { NqFormMixin } from '../mixins/NqFormMixin'
+import validators from 'vuelidate/lib/validators'
 export default {
   name: 'Currency',
   mixins: [ NqFormMixin ],
@@ -84,7 +105,8 @@ export default {
     return {
       form: {
         name: null,
-        age: null,
+        email: null,
+        age: 4,
         accept: false
       },
       loading: true
