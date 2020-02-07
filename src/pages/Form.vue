@@ -41,7 +41,7 @@
       :ready="!loading"
       :submitting="submitting"
     >
-      <nq-input
+      <!--nq-input
         class="col-12"
         v-model="form.name"
         label="Your name *"
@@ -52,15 +52,25 @@
           val => $rules.minLength(3)(val) || 'Your name should have at least 3 letters',
           val => $rules.maxLength(10)(val) || 'Your name should not be larger than 10 letters'
         ]"
-      />
-      <nq-input
+      /-->
+      <q-input
         class="col-12"
         v-model="form.email"
         type="email"
         label="Your email *"
         :rules="[
-          val => $rules.required(val) || 'An email is required',
-          val => $rules.email(val) || 'Please enter a valid email address'
+          $rules.required(),
+          $rules.email('Please enter a email')
+        ]"
+      />
+      <q-input
+        class="col-12"
+        v-model="confirm"
+        type="email"
+        label="Your email *"
+        :rules="[
+          $rules.required(),
+          $rules.is(form.email, 'Please enter the same email')
         ]"
       />
       <nq-input-number
@@ -68,28 +78,35 @@
         v-model="form.age"
         label="Your age *"
         :rules="[
-          val => $rules.required(val) || 'Your age is required',
-          val => $rules.between(10,100)(val) || 'Please enter your real age'
+         $rules.required('Your age is required'),
+         $rules.between(10,100, 'Es un número entre 1 y 100'),
+         $rules.is(12, 'Ingresa 12')
         ]"
       />
-      <nq-input-number
-        class="col-4"
+      <q-input
         v-model="form.age"
         label="Your age *"
         :rules="[
-          val => $rules.or($rules.between(10,15), $rules.between(20,25))(val) || 'Your age has to be between 10 and 15 or 20 and 25',
+          $rules.or(
+            $rules.and(
+              $rules.between(10,17),
+              $rules.between(16,25)
+            ),
+            $rules.minValue(17),
+            'Or nd message 2'
+          ),
         ]"
       />
-      <nq-field
+      <q-field
         :value="form.accept"
         label="Please read the license"
         stack-label
         :rules="[
-          val => $rules.isTrue(val) || 'Please set value to maximum 60'
+           $rules.is(true, 'Please accept the license')
         ]"
       >
         <q-toggle v-model="form.accept" label="I accept the license and terms" />
-      </nq-field>
+      </q-field>
     </nq-form>
 
   </q-page>
@@ -109,6 +126,7 @@ export default {
         age: 4,
         accept: false
       },
+      confirm: '',
       loading: true
     }
   },
