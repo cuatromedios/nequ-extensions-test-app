@@ -24,7 +24,7 @@
     <h3>Columns:</h3>
     <pre>{{ columns }}</pre>
     <h3>Actions:</h3>
-    <p>An array with <code>icon</code>, <code>tooltip</code> and <code>method</code> properties. Method is a method in the page that receives the row as parameter, for example <code>this.editBook</code></p>
+    <p>An array with <code>icon</code>, <code>tooltip</code> and <code>method</code> properties. Method is a method in the page that receives the row as parameter, for example <code>this.editBook</code>. If no <code>label</code> is set then the button will be rounded</p>
     <pre>{{ actions }}</pre>
     <h3>Data:</h3>
     <pre>{{ theData }}</pre>
@@ -37,7 +37,7 @@ export default {
   data () {
     return {
       columns: [
-        { name: 'month', label: 'Month', field: 'month', align: 'left', style: 'width: 70%' },
+        { name: 'month', label: 'Month', field: 'month', align: 'left' },
         { name: 'sales', label: 'Sales', field: 'sales' },
         { name: 'calc', label: 'Calculation' }
       ],
@@ -51,7 +51,7 @@ export default {
         { id:'m6', month:'July', sales: 5},
       ],
       actions: [
-        { icon: 'edit', method: this.edit, tooltip: 'Edit' },
+        { icon: 'edit', method: this.edit, tooltip: 'Edit', label: 'Details' },
         { icon: 'delete', color: 'negative', method: this.edit, tooltip: 'Delete' }
       ]
     }
