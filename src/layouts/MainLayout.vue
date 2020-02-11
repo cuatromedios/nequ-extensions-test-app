@@ -1,115 +1,41 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          icon="menu"
-          aria-label="Menu"
-        />
-
-        <q-toolbar-title>
-          NeQu Extension
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
-
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-grey-1"
-    >
-      <q-list>
-        <q-item-label header class="text-grey-8">Components</q-item-label>
-        <EssentialLink
-          v-for="link in components"
-          :key="link.title"
-          v-bind="link"
-        />
-        <q-item-label header class="text-grey-8">Forms</q-item-label>
-        <EssentialLink
-          v-for="link in forms"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
-
-    <q-page-container class="q-ma-lg">
-      <router-view />
-    </q-page-container>
-  </q-layout>
+  <nq-layout toolbarClass="" :tabs="tabs">
+    <template slot="title">
+      <q-btn flat label="Header"/>
+    </template>
+    <router-view />
+  </nq-layout>
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink'
 
 export default {
   name: 'MainLayout',
-
-  components: {
-    EssentialLink
-  },
-
+  components: {},
   data () {
     return {
-      leftDrawerOpen: false,
-      components: [
+      tabs: [
         {
-          title: 'Field',
-          caption: 'Generic field wrapper',
+          title: 'Fields',
           icon: 'code',
-          link: 'field'
+          children: [
+            { title: 'Field', route: 'field' },
+            { title: 'Input', route: 'input' },
+            { title: 'Number', route: 'number' },
+            { title: 'Currency', route: 'currency' },
+            { title: 'Percentage', route: 'percentage' },
+            { title: 'Select', route: 'select' }
+          ]
         },
         {
-          title: 'Input',
-          caption: 'Text input',
+          title: 'Forms',
           icon: 'code',
-          link: 'input'
-        },
-        {
-          title: 'Input Number',
-          caption: 'Number input',
-          icon: 'code',
-          link: 'number'
-        },
-        {
-          title: 'Input Currency',
-          caption: 'Numeric input for money values',
-          icon: 'code',
-          link: 'currency'
-        },
-        {
-          title: 'Input Percentage',
-          caption: 'Percentage input',
-          icon: 'code',
-          link: 'percentage'
-        },
-        {
-          title: 'Select',
-          caption: 'Select',
-          icon: 'code',
-          link: 'select'
+          route: 'form'
         },
         {
           title: 'Table',
-          caption: 'Table',
           icon: 'code',
-          link: 'table'
-        }
-      ],
-      forms: [
-        {
-          title: 'Form',
-          caption: 'Generic form',
-          icon: 'code',
-          link: 'form'
+          route: 'table'
         }
       ]
     }

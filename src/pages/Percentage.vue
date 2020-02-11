@@ -1,5 +1,8 @@
 <template>
-  <q-page class="">
+  <nq-page class="">
+    <template slot="aside">
+      <fields-menu />
+    </template>
     <h1>&lt;nq-input-percentage&gt;</h1>
     <h2>Features</h2>
     <ul>
@@ -16,12 +19,14 @@
     <p>
       <nq-input-percentage pattern="0,0.00" v-model="theModel" />
     </p>
-  </q-page>
+  </nq-page>
 </template>
 
 <script>
+import FieldsMenu from '../components/FieldsMenu'
 export default {
   name: 'Currency',
+  components: { FieldsMenu },
   data () {
     return {
       theModel: .5432

@@ -1,5 +1,8 @@
 <template>
-  <q-page class="">
+  <nq-page class="">
+    <template slot="aside">
+      <fields-menu />
+    </template>
     <h1>&lt;nq-input-number&gt;</h1>
     <h2>Features</h2>
     <ul>
@@ -30,12 +33,14 @@
     <p>
       <nq-input-number v-model="theModel" before="! " pattern="0" />
     </p>
-  </q-page>
+  </nq-page>
 </template>
 
 <script>
+import FieldsMenu from '../components/FieldsMenu'
 export default {
   name: 'Number',
+  components: { FieldsMenu },
   data () {
     return {
       theModel: 12345.678

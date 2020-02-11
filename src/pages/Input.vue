@@ -1,5 +1,8 @@
 <template>
-  <q-page>
+  <nq-page>
+    <template slot="aside">
+      <fields-menu />
+    </template>
     <h1>&lt;nq-input&gt;</h1>
     <h2>Features</h2>
     <ul>
@@ -46,12 +49,14 @@
     <p>
       <nq-input v-model="theModel" label="Borderless" readonly borderless/>
     </p>
-  </q-page>
+  </nq-page>
 </template>
 
 <script>
+import FieldsMenu from '../components/FieldsMenu'
 export default {
   name: 'Input',
+  components: { FieldsMenu },
   data () {
     return {
       theModel: 'The text'

@@ -1,6 +1,5 @@
 <template>
-  <q-page>
-    <h1>&lt;nq-table&gt;</h1>
+  <nq-page title="&lt;nq-table&gt;">
     <h2>Features</h2>
     <ul>
       <li>Stylized by default</li>
@@ -28,7 +27,7 @@
     <pre>{{ actions }}</pre>
     <h3>Data:</h3>
     <pre>{{ theData }}</pre>
-  </q-page>
+  </nq-page>
 </template>
 
 <script>

@@ -1,5 +1,8 @@
 <template>
-  <q-page class="">
+  <nq-page class="">
+    <template slot="aside">
+      <fields-menu />
+    </template>
     <h1>&lt;nq-input-currency&gt;</h1>
     <h2>Features</h2>
     <ul>
@@ -23,12 +26,14 @@
     <p>
       <nq-input-currency symbol="€" currency="EUR" v-model="theModel" />
     </p>
-  </q-page>
+  </nq-page>
 </template>
 
 <script>
+import FieldsMenu from '../components/FieldsMenu'
 export default {
   name: 'Currency',
+  components: { FieldsMenu },
   data () {
     return {
       theModel: 12345.678

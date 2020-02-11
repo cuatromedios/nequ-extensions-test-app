@@ -1,6 +1,8 @@
 <template>
-  <q-page>
-    <h1>&lt;nq-select&gt;</h1>
+  <nq-page title="&lt;nq-select&gt;">
+    <template slot="aside">
+      <fields-menu />
+    </template>
     <h2>Features</h2>
     <ul>
       <li>Basically the same Quasar select but with default styles for NuQu</li>
@@ -21,12 +23,14 @@
     <p>
       <nq-select label="Without emit-value" v-model="theModel" :options="options" option-label="name" option-value="id"/>
     </p>
-  </q-page>
+  </nq-page>
 </template>
 
 <script>
+import FieldsMenu from '../components/FieldsMenu'
 export default {
   name: 'Select',
+  components: { FieldsMenu },
   data () {
     return {
       theModel: null,

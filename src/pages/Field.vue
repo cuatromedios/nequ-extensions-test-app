@@ -1,5 +1,8 @@
 <template>
-  <q-page>
+  <nq-page max-width="md">
+    <template slot="aside">
+      <fields-menu />
+    </template>
     <h1>&lt;nq-field&gt;</h1>
     <h2>Features</h2>
     <ul>
@@ -84,12 +87,14 @@
       </nq-field>
     </div>
 
-  </q-page>
+  </nq-page>
 </template>
 
 <script>
+import FieldsMenu from '../components/FieldsMenu'
 export default {
   name: 'Input',
+  components: { FieldsMenu },
   data () {
     return {
       slider: 50,

@@ -1,5 +1,5 @@
 <template>
-  <q-page class="">
+  <nq-page title="NqForm">
     <h1>NqFormMixin</h1>
     <p>A mixin with default methods to handle a Form</p>
     <h2>Data</h2>
@@ -53,7 +53,7 @@
           val => $rules.maxLength(10)(val) || 'Your name should not be larger than 10 letters'
         ]"
       /-->
-      <q-input
+      <nq-input
         class="col-12"
         v-model="form.email"
         type="email"
@@ -63,7 +63,7 @@
           $rules.email('Please enter a email')
         ]"
       />
-      <q-input
+      <nq-input
         class="col-12"
         v-model="confirm"
         type="email"
@@ -83,7 +83,7 @@
          $rules.is(12, 'Ingresa 12')
         ]"
       />
-      <q-input
+      <nq-input
         v-model="form.age"
         label="Your age *"
         :rules="[
@@ -97,7 +97,7 @@
           ),
         ]"
       />
-      <q-field
+      <nq-field
         :value="form.accept"
         label="Please read the license"
         stack-label
@@ -106,10 +106,10 @@
         ]"
       >
         <q-toggle v-model="form.accept" label="I accept the license and terms" />
-      </q-field>
+      </nq-field>
     </nq-form>
 
-  </q-page>
+  </nq-page>
 </template>
 
 <script>
