@@ -1,5 +1,5 @@
 <template>
-  <nq-page title="NqForm">
+  <nq-page max-width="md" title="NqForm">
     <h1>NqFormMixin</h1>
     <p>A mixin with default methods to handle a Form</p>
     <h2>Data</h2>
