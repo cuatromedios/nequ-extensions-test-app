@@ -96,6 +96,12 @@ export default {
           caption: 'Select',
           icon: 'code',
           link: 'select'
+        },
+        {
+          title: 'Table',
+          caption: 'Table',
+          icon: 'code',
+          link: 'table'
         }
       ],
       forms: [

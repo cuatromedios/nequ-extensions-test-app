@@ -11,7 +11,8 @@ const routes = [
       { name: 'currency', path: 'currency', component: () => import('pages/Currency.vue') },
       { name: 'percentage', path: 'percentage', component: () => import('pages/Percentage.vue') },
       { name: 'select', path: 'select', component: () => import('pages/Select.vue') },
-      { name: 'form', path: 'form', component: () => import('pages/Form.vue') }
+      { name: 'form', path: 'form', component: () => import('pages/Form.vue') },
+      { name: 'table', path: 'table', component: () => import('pages/Table.vue') }
     ]
   }
 ]
