@@ -16,6 +16,11 @@ export default {
     return {
       tabs: [
         {
+          title: 'Layouts',
+          icon: 'code',
+          route: 'layout'
+        },
+        {
           title: 'Fields',
           icon: 'code',
           children: [
