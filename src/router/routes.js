@@ -5,6 +5,7 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { name: 'layout', path: 'layout', component: () => import('pages/Layout.vue') },
+      { name: 'page', path: 'page', component: () => import('pages/Page.vue') },
       { name: 'field', path: 'field', component: () => import('pages/Field.vue') },
       { name: 'input', path: 'input', component: () => import('pages/Input.vue') },
       { name: 'number', path: 'number', component: () => import('pages/Number.vue') },

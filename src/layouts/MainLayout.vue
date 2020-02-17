@@ -18,7 +18,10 @@ export default {
         {
           title: 'Layouts',
           icon: 'code',
-          route: 'layout'
+          children: [
+            { title: 'Layout', route: 'layout' },
+            { title: 'Page', route: 'page' }
+          ]
         },
         {
           title: 'Fields',

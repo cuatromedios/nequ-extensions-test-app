@@ -1,11 +1,17 @@
 <template>
   <nq-page title="Layouts"
            max-width="md">
-    <template slot="aside">
-      <h2>Aside</h2>
-    </template>
-    <h2>Features</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit lacinia euismod. Maecenas ac ante non velit fringilla ullamcorper ac sit amet justo. Pellentesque quis consequat ante. Vestibulum imperdiet tristique eros, eu dictum nulla tempor eget. Vestibulum erat nibh, eleifend sit amet ullamcorper eget, varius sed augue. Sed finibus quam nisi, ac maximus mauris laoreet quis. Donec suscipit, lacus nec consectetur placerat, nibh felis pellentesque neque, et viverra felis quam vitae nisl. Quisque vel elit purus. Fusce nec lacinia ligula, eu laoreet quam. Sed felis sapien, pellentesque vestibulum purus a, tincidunt malesuada justo. Sed commodo scelerisque metus sit amet sollicitudin. Cras tincidunt blandit justo et pretium. In sagittis, urna at accumsan feugiat, eros magna tincidunt nibh, a ullamcorper augue augue sed nisi.</p>
+    <h2>nq-layout</h2>
+    <p>Creates a layout that includes a header bar that can contain a logo and a menu.</p>
+    <h3>Attributes</h3>
+    <ul>
+      <li><code>toolbar-class</code> A class to be added to the toolbar, for examle to change the background</li>
+      <li><code>tabs</code> An array to define the tabs menu (see sample below)</li>
+    </ul>
+    <h3>Slots</h3>
+    <ul>
+      <li><code>title</code> Add any element to the title area, for example an image</li>
+    </ul>
     <h2>Sample code</h2>
     <pre>
 &#x3C;template&#x3E;
