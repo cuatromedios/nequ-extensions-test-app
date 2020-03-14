@@ -19,20 +19,20 @@ export default {
           title: 'Layouts',
           icon: 'code',
           children: [
-            { title: 'Layout', to: { name: 'layout'} },
-            { title: 'Page', to: 'page' }
+            { title: 'Layout', to: { name: 'layout'}, icon: 'code' },
+            { title: 'Page', to: 'page', icon: 'code' }
           ]
         },
         {
           title: 'Fields',
           icon: 'code',
           children: [
-            { title: 'Field', to: 'field' },
-            { title: 'Input', to: 'input' },
-            { title: 'Number', to: 'number' },
-            { title: 'Currency', to: 'currency' },
-            { title: 'Percentage', to: 'percentage' },
-            { title: 'Select', to: 'select' }
+            { title: 'Field', to: 'field',  icon: 'code' },
+            { title: 'Input', to: 'input',  icon: 'code' },
+            { title: 'Number', to: 'number', icon: 'code' },
+            { title: 'Currency', to: 'currency', icon: 'code' },
+            { title: 'Percentage', to: 'percentage', icon: 'code' },
+            { title: 'Select', to: 'select', icon: 'code' }
           ]
         },
         {
