@@ -19,31 +19,31 @@ export default {
           title: 'Layouts',
           icon: 'code',
           children: [
-            { title: 'Layout', route: 'layout' },
-            { title: 'Page', route: 'page' }
+            { title: 'Layout', to: { name: 'layout'} },
+            { title: 'Page', to: 'page' }
           ]
         },
         {
           title: 'Fields',
           icon: 'code',
           children: [
-            { title: 'Field', route: 'field' },
-            { title: 'Input', route: 'input' },
-            { title: 'Number', route: 'number' },
-            { title: 'Currency', route: 'currency' },
-            { title: 'Percentage', route: 'percentage' },
-            { title: 'Select', route: 'select' }
+            { title: 'Field', to: 'field' },
+            { title: 'Input', to: 'input' },
+            { title: 'Number', to: 'number' },
+            { title: 'Currency', to: 'currency' },
+            { title: 'Percentage', to: 'percentage' },
+            { title: 'Select', to: 'select' }
           ]
         },
         {
           title: 'Forms',
           icon: 'code',
-          route: 'form'
+          to: 'form'
         },
         {
           title: 'Table',
           icon: 'code',
-          route: 'table'
+          to: 'table'
         }
       ]
     }
