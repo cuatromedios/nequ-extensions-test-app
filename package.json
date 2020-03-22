@@ -17,13 +17,13 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
-    "quasar": "^1.0.0",
+    "@quasar/extras": "^1.6.0",
+    "quasar": "^1.9.10",
     "vue-code-highlight": "^0.7.4",
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0",
+    "@quasar/app": "^1.6.0",
     "quasar-app-extension-nequ-components": "file:../quasar-app-extension-nequ-components",
     "quasar-app-extension-vuelidate-rules": "file:../quasar-app-extension-vuelidate-rules"
   },
