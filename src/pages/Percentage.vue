@@ -29,7 +29,7 @@
 <script>
 import FieldsMenu from '../components/FieldsMenu'
 export default {
-  name: 'Currency',
+  name: 'Percentage',
   components: { FieldsMenu },
   data () {
     return {

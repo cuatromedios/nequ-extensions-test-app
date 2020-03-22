@@ -181,7 +181,7 @@
 <script>
 import FieldsMenu from '../components/FieldsMenu'
 export default {
-  name: 'Input',
+  name: 'Field',
   components: { FieldsMenu },
   data () {
     return {
