@@ -1,5 +1,5 @@
 // app global css in SCSS form
-$bg-color: lighten(desaturate($primary, 66%), 50%);
+$bg-color: lighten(desaturate($primary, 66%), 45%);
 $text-color: darken(desaturate($primary, 75%), 25%);
 
 @import "fonts";
