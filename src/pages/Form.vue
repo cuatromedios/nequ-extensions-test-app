@@ -41,22 +41,21 @@
       :ready="!loading"
       :submitting="submitting"
     >
-      <!--nq-input
+      <nq-input
         class="col-12"
         v-model="form.name"
         label="Your name *"
         hint="Name and surname"
         :rules="[
-          val => $rules.required(val) || 'Your name is required',
-          val => $rules.alpha(val) || 'Your name should not have numbers',
-          val => $rules.minLength(3)(val) || 'Your name should have at least 3 letters',
-          val => $rules.maxLength(10)(val) || 'Your name should not be larger than 10 letters'
+          $rules.required('Your name is required'),
+          $rules.alpha('Your name should not have numbers or special characters'),
+          $rules.minLength(3,'Your name should have at least 3 letters'),
+          $rules.maxLength(10, 'Your name should not be larger than 10 letters')
         ]"
-      /-->
+      />
       <nq-input
-        class="col-12"
+        class="col-6"
         v-model="form.email"
-        type="email"
         label="Your email *"
         :rules="[
           $rules.required(),
@@ -64,10 +63,9 @@
         ]"
       />
       <nq-input
-        class="col-12"
+        class="col-6"
         v-model="confirm"
-        type="email"
-        label="Your email *"
+        label="Confirm email *"
         :rules="[
           $rules.required(),
           $rules.is(form.email, 'Please enter the same email')
@@ -79,33 +77,28 @@
         label="Your age *"
         :rules="[
          $rules.required('Your age is required'),
-         $rules.between(10,100, 'Es un número entre 1 y 100'),
-         $rules.is(12, 'Ingresa 12')
+         $rules.between(0,100, 'Es un número entre 1 y 100')
         ]"
       />
-      <nq-input
-        v-model="form.age"
-        label="Your age *"
+      <nq-select
+        v-model="form.gender"
+        label="Gender"
+        class="col-4"
+        :options="[ { label: 'Male', value: 'm' }, { label: 'Female', value: 'f' }, { label: 'Other', value: 'o' }   ]"
         :rules="[
-          $rules.or(
-            $rules.and(
-              $rules.between(10,17),
-              $rules.between(16,25)
-            ),
-            $rules.minValue(17),
-            'Or nd message 2'
-          ),
+          $rules.required('Please select one'),
         ]"
       />
       <nq-field
         :value="form.accept"
         label="Please read the license"
+        class="col-4" dense
         stack-label
         :rules="[
            $rules.is(true, 'Please accept the license')
         ]"
       >
-        <q-toggle v-model="form.accept" label="I accept the license and terms" />
+        <q-toggle v-model="form.accept" label="I accept" />
       </nq-field>
     </nq-form>
 
@@ -124,6 +117,7 @@ export default {
         name: null,
         email: null,
         age: 4,
+        gender: null,
         accept: false
       },
       confirm: '',
@@ -134,11 +128,11 @@ export default {
     this.loadEndpoints()
   },
   methods: {
-    onSubmitOk () {
-
+    onSubmit () {
+      this.$q.notify({ message: 'Sent', color: 'positive' })
     },
     onCancel () {
-      console.log('onCancel')
+      this.$q.notify({ message: 'Canceled', color: 'negative' })
     }
   }
 }
