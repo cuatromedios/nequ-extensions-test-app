@@ -5,7 +5,7 @@
     </template>
     <h2>Features</h2>
     <ul>
-      <li>Stylized by default</li>
+      <li>Stylized by default with outline and light grey background</li>
     </ul>
     <h2>Attributes</h2>
     <ul>

@@ -5,7 +5,7 @@
     </template>
     <h2>Features</h2>
     <ul>
-      <li>Basically the same Quasar select but with default styles for NuQu</li>
+      <li>Basically the same Quasar select but with default styles for NuQu: with outline and light grey background</li>
     </ul>
     <h2>Attributes</h2>
     <ul>
