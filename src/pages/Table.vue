@@ -6,7 +6,7 @@
     </ul>
     <h2>Attributes</h2>
     <ul>
-      <li>Inherits any quasar &lt;q-table&gt; attributes and slots</li>
+      <li>Inherits any <a href="https://quasar.dev/vue-components/table" target="_blank">quasar &lt;q-table&gt;</a> attributes and slots</li>
       <li><code>actions</code> An array of objects with <code>icon</code>, <code>tooltip</code> and <code>method</code> properties. Adds an extra column with buttons that can be shown on rollover
         <ul>
           <li><code>method</code> is a method in the page that receives the row as parameter</li>
@@ -30,6 +30,11 @@
           {{ props.row.sales }} x 2 = <q-badge color="purple" :label="props.row.sales * 2" />
         </q-td>
       </template>
+      <template v-slot:body-cell-month="props">
+        <q-td :props="props">
+          <strong><router-link to="#">{{ props.row.month }}</router-link></strong>
+        </q-td>
+      </template>
     </nq-table>
     <h3>Sample code</h3>
     <vue-code-highlight>
@@ -45,7 +50,12 @@
       &#x3E;
       &#x3C;template v-slot:body-cell-calc=&#x22;props&#x22;&#x3E;
         &#x3C;q-td :props=&#x22;props&#x22;&#x3E;
-          { {  props.row.sales } } x 2 = &#x3C;q-badge color=&#x22;purple&#x22; :label=&#x22;props.row.sales * 2&#x22; /&#x3E;
+          { { props.row.sales } } x 2 = &#x3C;q-badge color=&#x22;purple&#x22; :label=&#x22;props.row.sales * 2&#x22; /&#x3E;
+        &#x3C;/q-td&#x3E;
+      &#x3C;/template&#x3E;
+      &#x3C;template v-slot:body-cell-month=&#x22;props&#x22;&#x3E;
+        &#x3C;q-td :props=&#x22;props&#x22;&#x3E;
+          &#x3C;strong&#x3E;&#x3C;router-link to=&#x22;#&#x22;&#x3E;{ { props.row.month } }&#x3C;/router-link&#x3E;&#x3C;/strong&#x3E;
         &#x3C;/q-td&#x3E;
       &#x3C;/template&#x3E;
     &#x3C;/nq-table&#x3E;
@@ -99,7 +109,7 @@ export default {
   data () {
     return {
       columns: [
-        { name: 'month', label: 'Month', field: 'month', align: 'left' },
+        { name: 'month', label: 'Month', field: 'month', align: 'left'},
         { name: 'sales', label: 'Sales', field: 'sales', align: 'right' },
         { name: 'calc', label: 'Calculation' }
       ],
