@@ -13,7 +13,7 @@
       <li><code>title</code> Add any element to the title area, for example an image</li>
     </ul>
     <h2>Sample code</h2>
-    <pre>
+<vue-code-highlight>
 &#x3C;template&#x3E;
   &#x3C;nq-layout toolbarClass=&#x22;&#x22; :tabs=&#x22;tabs&#x22;&#x3E;
     &#x3C;template slot=&#x22;title&#x22;&#x3E;
@@ -63,8 +63,7 @@ export default {
   }
 }
 &#x3C;/script&#x3E;
-
-    </pre>
+</vue-code-highlight>
   </nq-page>
 </template>
 

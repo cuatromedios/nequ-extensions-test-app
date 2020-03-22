@@ -18,7 +18,7 @@
       <li><code>aside</code> Add any element to the aside area, for example a filter form</li>
     </ul>
     <h2>Sample code</h2>
-    <pre>
+    <vue-code-highlight>
 &#x3C;nq-page title=&#x22;Page&#x22;
            max-width=&#x22;md&#x22;&#x3E;
     &#x3C;template slot=&#x22;aside&#x22;&#x3E;
@@ -28,7 +28,7 @@
     &#x3C;h2&#x3E;nq-page&#x3C;/h2&#x3E;
     &#x3C;p&#x3E;Nunc finibus odio nunc, id pellentesque lacus tempor semper....&#x3C;/p&#x3E;
 &#x3C;/nq-page title=&#x22;Page&#x22;
-    </pre>
+    </vue-code-highlight>
   </nq-page>
 </template>
 

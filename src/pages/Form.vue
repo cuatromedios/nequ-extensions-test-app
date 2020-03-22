@@ -207,12 +207,8 @@ export default {
 </template>
 
 <script>
-import { component as VueCodeHighlight } from 'vue-code-highlight'
 export default {
   name: 'Form',
-  components:{
-    VueCodeHighlight
-  },
   data () {
     return {
       form: {
