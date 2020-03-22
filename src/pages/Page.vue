@@ -11,7 +11,8 @@
     <ul>
       <li><code>title</code> The text to be used as title (h1)</li>
       <li><code>max-width</code> xs, sm, md, lg or xl to define the max width of the page </li>
-      <li><code>aside-cols</code> from 1 to 11, to set how many columns will the aside slot (if exist) will take</li>
+      <li><code>aside-cols</code> from 1 to 12, to set how many columns will the aside slot (if exist) will take. 12 By default, for extra small (xs) devices</li>
+      <li><code>aside-cols-sm, aside-cols-md, aside-cols-lg, aside-cols-xl</code> from 1 to 12, to set how many columns will the aside slot (if exist) will take, in small (sm), medium (md), large (lg) and extra large (xl) devices. 4, 3, 3, 3 by default respectively.</li>
     </ul>
     <h3>Slots</h3>
     <ul>
