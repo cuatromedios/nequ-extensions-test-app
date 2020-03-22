@@ -6,3 +6,4 @@ $text-color: darken(desaturate($primary, 75%), 25%);
 @import "typography";
 @import "color";
 @import "fields";
+@import "../../node_modules/vue-code-highlight/themes/prism.css";
