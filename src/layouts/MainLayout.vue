@@ -1,5 +1,5 @@
 <template>
-  <nq-layout :tabs="tabs">
+  <nq-layout :tabs="tabs" indicator-color="warning">
     <template slot="title">
       <q-btn :to="{ name: 'layout' }" flat label="NeQu Components"/>
     </template>
