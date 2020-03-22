@@ -5,8 +5,10 @@
     <p>Creates a layout that includes a header bar that can contain a logo and a menu.</p>
     <h3>Attributes</h3>
     <ul>
-      <li><code>toolbar-class</code> A class to be added to the toolbar, for examle to change the background</li>
+      <li><code>toolbar-class</code> Classes to be added to the toolbar, for examle to change the background, if not set, the default is 'bg-primary text-white'</li>
+      <li><code>indicatorColor</code> A named color to use as in the indicator, 'secondary' by default</li>
       <li><code>tabs</code> An array to define the tabs menu (see sample below)</li>
+      <li><code>menuIcon</code> The named icon to be used as in the button that toggles the hamburger menu in mobile devices. 'menu' (Material Icon) by default, can be set, for example to 'fal fa-bars' if using fontAwesome</li>
     </ul>
     <h3>Slots</h3>
     <ul>
@@ -15,7 +17,7 @@
     <h2>Sample code</h2>
 <vue-code-highlight>
 &#x3C;template&#x3E;
-  &#x3C;nq-layout toolbarClass=&#x22;&#x22; :tabs=&#x22;tabs&#x22;&#x3E;
+  &#x3C;nq-layout toolbarClass=&#x22;bg-black text-white&#x22; :tabs=&#x22;tabs&#x22;&#x3E;
     &#x3C;template slot=&#x22;title&#x22;&#x3E;
       &#x3C;q-btn flat label=&#x22;Header&#x22;/&#x3E;
     &#x3C;/template&#x3E;

@@ -1,7 +1,7 @@
 <template>
-  <nq-layout toolbarClass="" :tabs="tabs">
+  <nq-layout :tabs="tabs">
     <template slot="title">
-      <q-btn flat label="Header"/>
+      <q-btn :to="{ name: 'layout' }" flat label="NeQu Components"/>
     </template>
     <router-view />
   </nq-layout>
