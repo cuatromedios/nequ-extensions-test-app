@@ -44,6 +44,25 @@
           $rules.maxLength(10, 'Your name should not be larger than 10 letters')
         ]"
       />
+      <nq-field
+        :label="`Range: ${ form.range.min } - ${ form.range.max }`"
+        class="col-12"
+        :value="form.range"
+        @input="val => (val === null && (form.range = { min: 0, max: 20}))"
+        clearable
+        :rules="[
+          $rules.between(5,20, 'Please select a range between 5 and 20')
+        ]"
+      >
+        <template v-slot:control>
+          <q-range
+            :value="form.range"
+            @change="val => { form.range = val }"
+            :min="0"
+            :max="30"
+          />
+        </template>
+      </nq-field>
       <nq-input
         class="col-6"
         v-model="form.email"
@@ -114,6 +133,25 @@
           $rules.maxLength(10, &#x27;Your name should not be larger than 10 letters&#x27;)
         ]&#x22;
       /&#x3E;
+      &#x3C;nq-field
+        :label=&#x22;&#x60;Range: ${ form.range.min } - ${ form.range.max }&#x60;&#x22;
+        class=&#x22;col-12&#x22;
+        :value=&#x22;form.range&#x22;
+        @input=&#x22;val =&#x3E; (val === null &#x26;&#x26; (form.range = { min: 0, max: 20}))&#x22;
+        clearable
+        :rules=&#x22;[
+          $rules.between(5,20, &#x27;Please select a range between 5 and 20&#x27;)
+        ]&#x22;
+      &#x3E;
+        &#x3C;template v-slot:control&#x3E;
+          &#x3C;q-range
+            :value=&#x22;form.range&#x22;
+            @change=&#x22;val =&#x3E; { form.range = val }&#x22;
+            :min=&#x22;0&#x22;
+            :max=&#x22;30&#x22;
+          /&#x3E;
+        &#x3C;/template&#x3E;
+      &#x3C;/nq-field&#x3E;
       &#x3C;nq-input
         class=&#x22;col-6&#x22;
         v-model=&#x22;form.email&#x22;
@@ -173,6 +211,7 @@ export default {
         name: null,
         email: null,
         age: 4,
+        range: { min: 5, max: 10 },
         gender: null,
         accept: false
       },
@@ -215,6 +254,7 @@ export default {
         name: null,
         email: null,
         age: 4,
+        range: { min: 5, max: 10 },
         gender: null,
         accept: false
       },
