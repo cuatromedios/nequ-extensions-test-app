@@ -1,4 +1,9 @@
 {
   "vuelidate-rules": {},
-  "nequ-components": {}
+  "nequ-components": {},
+  "filters": {
+    "thousandsSeparator": ",",
+    "currencySymbol": "$",
+    "currencyDecimals": 2
+  }
 }

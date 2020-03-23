@@ -14,7 +14,8 @@ const routes = [
       { name: 'percentage', path: 'percentage', component: () => import('pages/Percentage.vue') },
       { name: 'select', path: 'select', component: () => import('pages/Select.vue') },
       { name: 'form', path: 'form', component: () => import('pages/Form.vue') },
-      { name: 'table', path: 'table', component: () => import('pages/Table.vue') }
+      { name: 'table', path: 'table', component: () => import('pages/Table.vue') },
+      { name: 'filters', path: 'filters', component: () => import('pages/Filters.vue') }
     ]
   }
 ]

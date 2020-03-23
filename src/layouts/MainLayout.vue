@@ -44,6 +44,11 @@ export default {
           title: 'Table',
           icon: 'code',
           to: 'table'
+        },
+        {
+          title: 'Filters',
+          icon: 'flip',
+          to: 'filters'
         }
       ]
     }
