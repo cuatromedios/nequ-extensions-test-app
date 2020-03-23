@@ -4,12 +4,29 @@
     <p>If <code>quasar-app-extension-filters</code> is installed, you have these filters for use in your templates</p>
 
     <h2>Numeric filters</h2>
-    <nq-input-number v-model="numberModel" class="col-6" label="A number" />
-    <p>{{numberModel}}</p>
+    <p>Functions taken from <a href="http://numeraljs.com/" target="_blank">NumeralJS</a>. You can use the predefined currency and percentage or use any format using numeral function</p>
+    <nq-input-number v-model="numberModel" class="col-6" label="A number" pattern="0.[000]" />
     <div class="row">
+      <dl class="col-6">
+        <dt v-pre>{{ numberModel | currency }}</dt>
+        <dd>{{ numberModel | currency }}</dd>
+      </dl>
+      <dl class="col-6">
+        <dt v-pre>{{ numberModel | percentage }}</dt>
+        <dd>{{ numberModel | percentage }}</dd>
+      </dl>
+      <dl class="col-6">
+        <dt v-pre>{{ numberModel | numeral('0a') }}</dt>
+        <dd>{{ numberModel | numeral('0a') }}</dd>
+      </dl>
+      <dl class="col-6">
+        <dt v-pre>{{ numberModel | numeral('0.000') }}</dt>
+        <dd>{{ numberModel | numeral('0.000') }}</dd>
+      </dl>
     </div>
 
     <h2>Text filters</h2>
+    <p>Functions taken from <a href="https://lodash.com/docs/" target="_blank">Lodash</a></p>
     <nq-input v-model="textModel" class="col-6" label="A text" />
     <div class="row">
       <dl class="col-6">
