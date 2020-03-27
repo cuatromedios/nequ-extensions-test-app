@@ -12,8 +12,10 @@
     "build": "quasar build",
     "invoke": "quasar ext invoke nequ-components",
     "invoke-vuelidate": "quasar ext invoke vuelidate-rules",
+    "invoke-filters": "quasar ext invoke filters",
     "uninvoke": "quasar ext uninvoke nequ-components",
     "uninvoke-vuelidate": "quasar ext uninvoke vuelidate-rules",
+    "uninvoke-filters": "quasar ext uninvoke filters",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {

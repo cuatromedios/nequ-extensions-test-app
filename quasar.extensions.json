@@ -2,8 +2,9 @@
   "vuelidate-rules": {},
   "nequ-components": {},
   "filters": {
-    "thousandsSeparator": ",",
+    "thousandsDelimeter": ",",
     "currencySymbol": "$",
-    "currencyDecimals": 2
+    "decimalDelimeter": ".",
+    "momentLocale": "es"
   }
 }

@@ -4,7 +4,7 @@
     <p>If <code>quasar-app-extension-filters</code> is installed, you have these filters for use in your templates</p>
 
     <h2>Numeric filters</h2>
-    <p>Functions taken from <a href="http://numeraljs.com/" target="_blank">NumeralJS</a>. You can use the predefined currency and percentage or use any format using numeral function</p>
+    <p>Functions taken from <a href="http://numeraljs.com/" target="_blank">NumeralJS</a>. You can use the predefined currency and percentage or use any format using NumeralJS function.</p>
     <nq-input-number v-model="numberModel" class="col-6" label="A number" pattern="0.[000]" />
     <div class="row">
       <dl class="col-6">
@@ -102,6 +102,19 @@
         <dd>{{textModel | upperFirst }}</dd>
       </dl>
     </div>
+    <h2>Date filters</h2>
+    <p>Functions taken from <a href="https://momentjs.com/" target="_blank">MomentJS</a>. You can use any format available in MomenJS.</p>
+    <div class="row">
+      <dl class="col-6">
+        <dt v-pre>{{ dateModel | moment('ll') }}</dt>
+        <dd>{{ dateModel | moment('ll') }}</dd>
+      </dl>
+      <dl class="col-6">
+        <dt v-pre>{{ dateModel | moment('dddd DD MMMM YYYY, h:mm:ss a') }}</dt>
+        <dd>{{ dateModel | moment('dddd DD MMMM YYYY, h:mm:ss a') }}</dd>
+      </dl>
+    </div>
+
     <vue-code-highlight>
     </vue-code-highlight>
   </nq-page>
@@ -114,6 +127,14 @@ export default {
     return {
       numberModel: 12345.67,
       textModel: 'our planet'
+    }
+  },
+  computed: {
+    ts () {
+      return process.env.THOUSANDS_DELIMETER
+    },
+    dateModel () {
+      return new Date()
     }
   }
 }
