@@ -36,29 +36,29 @@ export default {
         {
           title: &#x27;Layouts&#x27;,
           icon: &#x27;code&#x27;,
-          route: &#x27;layout&#x27;
+          to: &#x27;layout&#x27;
         },
         {
           title: &#x27;Fields&#x27;,
           icon: &#x27;code&#x27;,
           children: [
-            { title: &#x27;Field&#x27;, route: &#x27;field&#x27; },
-            { title: &#x27;Input&#x27;, route: &#x27;input&#x27; },
-            { title: &#x27;Number&#x27;, route: &#x27;number&#x27; },
-            { title: &#x27;Currency&#x27;, route: &#x27;currency&#x27; },
-            { title: &#x27;Percentage&#x27;, route: &#x27;percentage&#x27; },
-            { title: &#x27;Select&#x27;, route: &#x27;select&#x27; }
+            { title: &#x27;Field&#x27;, to: &#x27;field&#x27; },
+            { title: &#x27;Input&#x27;, to: &#x27;input&#x27; },
+            { title: &#x27;Number&#x27;, to: &#x27;number&#x27; },
+            { title: &#x27;Currency&#x27;, to: &#x27;currency&#x27; },
+            { title: &#x27;Percentage&#x27;, to: &#x27;percentage&#x27; },
+            { title: &#x27;Select&#x27;, to: &#x27;select&#x27; }
           ]
         },
         {
           title: &#x27;Forms&#x27;,
           icon: &#x27;code&#x27;,
-          route: &#x27;form&#x27;
+          to: &#x27;form&#x27;
         },
         {
           title: &#x27;Table&#x27;,
           icon: &#x27;code&#x27;,
-          route: &#x27;table&#x27;
+          to: &#x27;table&#x27;
         }
       ]
     }
