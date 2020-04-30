@@ -11,7 +11,8 @@
     <ul>
       <li><code>option-label</code>: The property of the option to use as label, for example 'name'</li>
       <li><code>option-value</code>: The property of the option to use as value, for example 'id'</li>
-      <li><code>emit-value</code>: If set, it will only emit the value, if not, the whole option</li>
+      <li><code>emit-value</code>: If set, it will only emit the value, if not, the whole option object</li>
+      <li><code>map-options</code>: If set, the selected option, will be mapped to the corresponding label to be shown in the component</li>
     </ul>
     <p>Model: <code>{{ theModel }}</code></p>
     <nq-form no-actions>

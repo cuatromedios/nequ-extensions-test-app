@@ -1,6 +1,6 @@
 {
   "name": "nequ-extensions-test-app",
-  "version": "0.5.4",
+  "version": "0.5.6",
   "description": "A Quasar Framework app for testing NeQu extensions",
   "productName": "NeQu Components documentation",
   "cordovaId": "",
