@@ -32,7 +32,8 @@ export default {
             { title: 'Number', to: 'number', icon: 'code' },
             { title: 'Currency', to: 'currency', icon: 'code' },
             { title: 'Percentage', to: 'percentage', icon: 'code' },
-            { title: 'Select', to: 'select', icon: 'code' }
+            { title: 'Select', to: 'select', icon: 'code' },
+            { title: 'DateTme', to: 'datetime', icon: 'code' }
           ]
         },
         {

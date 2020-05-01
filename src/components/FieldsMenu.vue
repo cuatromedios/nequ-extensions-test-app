@@ -6,6 +6,7 @@
     <q-item to="currency">NqCurrency</q-item>
     <q-item to="percentage">NqPercentage</q-item>
     <q-item to="select">NqSelect</q-item>
+    <q-item to="datetime">NqDateTime</q-item>
   </q-list>
 </template>
 <script>
