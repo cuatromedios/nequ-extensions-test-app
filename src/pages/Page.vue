@@ -17,6 +17,9 @@
     <h3>Slots</h3>
     <ul>
       <li><code>aside</code> Add any element to the aside area, for example a filter form</li>
+      <li><code>before</code> Content before the title</li>
+      <li><code>after</code> Content after the main container</li>
+      <li><code>between</code> Content between the title and the main container</li>
     </ul>
     <h2>Sample code</h2>
     <vue-code-highlight>
