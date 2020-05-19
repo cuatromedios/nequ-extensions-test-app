@@ -9,8 +9,12 @@
     </ul>
     <h2>Attributes</h2>
     <ul>
-      <li><code>symbol</code> $ by default</li>
-      <li><code>currency</code> Appends a currency for example USD</li>
+      <li><code>model-format</code> The moment format the date will use when the model is emitted. Default "YYYY-MM-DDTHH:mm:ssZ"</li>
+      <li><code>display-format</code> The moment format the date will use when the model is viewed in the document. Default "MMMM Do YYYY, kk:mm"</li>
+      <li><code>display-format</code> The moment format the date will use when the model is viewed in the document. Default "MMMM Do YYYY, kk:mm"</li>
+      <li><code>date-icon</code> Icon to use to open the date picker. Default "event"</li>
+      <li><code>time-icon</code> Icon to use to open the date picker. Default "access_time"</li>
+      <li><code>no-time</code> Hide the time picker. Default "false"</li>
     </ul>
     <h3>Model 1: <code>{{ theModel1 }}</code></h3>
     <nq-form no-actions>
