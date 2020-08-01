@@ -1,7 +1,7 @@
 <template>
-  <nq-layout toolbarClass="" :tabs="tabs">
+  <nq-layout :tabs="tabs" indicator-color="warning">
     <template slot="title">
-      <q-btn flat label="Header"/>
+      <q-btn :to="{ name: 'layout' }" flat label="NeQu Components"/>
     </template>
     <router-view />
   </nq-layout>
@@ -19,31 +19,37 @@ export default {
           title: 'Layouts',
           icon: 'code',
           children: [
-            { title: 'Layout', route: 'layout' },
-            { title: 'Page', route: 'page' }
+            { title: 'Layout', to: { name: 'layout'}, icon: 'code' },
+            { title: 'Page', to: 'page', icon: 'code' }
           ]
         },
         {
           title: 'Fields',
           icon: 'code',
           children: [
-            { title: 'Field', route: 'field' },
-            { title: 'Input', route: 'input' },
-            { title: 'Number', route: 'number' },
-            { title: 'Currency', route: 'currency' },
-            { title: 'Percentage', route: 'percentage' },
-            { title: 'Select', route: 'select' }
+            { title: 'Field', to: 'field',  icon: 'code' },
+            { title: 'Input', to: 'input',  icon: 'code' },
+            { title: 'Number', to: 'number', icon: 'code' },
+            { title: 'Currency', to: 'currency', icon: 'code' },
+            { title: 'Percentage', to: 'percentage', icon: 'code' },
+            { title: 'Select', to: 'select', icon: 'code' },
+            { title: 'DateTme', to: 'datetime', icon: 'code' }
           ]
         },
         {
           title: 'Forms',
           icon: 'code',
-          route: 'form'
+          to: 'form'
         },
         {
           title: 'Table',
           icon: 'code',
-          route: 'table'
+          to: 'table'
+        },
+        {
+          title: 'Filters',
+          icon: 'flip',
+          to: 'filters'
         }
       ]
     }

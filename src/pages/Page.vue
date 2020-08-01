@@ -11,14 +11,18 @@
     <ul>
       <li><code>title</code> The text to be used as title (h1)</li>
       <li><code>max-width</code> xs, sm, md, lg or xl to define the max width of the page </li>
-      <li><code>aside-cols</code> from 1 to 11, to set how many columns will the aside slot (if exist) will take</li>
+      <li><code>aside-cols</code> from 1 to 12, to set how many columns will the aside slot (if exist) will take. 12 By default, for extra small (xs) devices</li>
+      <li><code>aside-cols-sm, aside-cols-md, aside-cols-lg, aside-cols-xl</code> from 1 to 12, to set how many columns will the aside slot (if exist) will take, in small (sm), medium (md), large (lg) and extra large (xl) devices. 4, 3, 3, 3 by default respectively.</li>
     </ul>
     <h3>Slots</h3>
     <ul>
       <li><code>aside</code> Add any element to the aside area, for example a filter form</li>
+      <li><code>before</code> Content before the title</li>
+      <li><code>after</code> Content after the main container</li>
+      <li><code>between</code> Content between the title and the main container</li>
     </ul>
     <h2>Sample code</h2>
-    <pre>
+    <vue-code-highlight>
 &#x3C;nq-page title=&#x22;Page&#x22;
            max-width=&#x22;md&#x22;&#x3E;
     &#x3C;template slot=&#x22;aside&#x22;&#x3E;
@@ -28,7 +32,7 @@
     &#x3C;h2&#x3E;nq-page&#x3C;/h2&#x3E;
     &#x3C;p&#x3E;Nunc finibus odio nunc, id pellentesque lacus tempor semper....&#x3C;/p&#x3E;
 &#x3C;/nq-page title=&#x22;Page&#x22;
-    </pre>
+    </vue-code-highlight>
   </nq-page>
 </template>
 

@@ -1,4 +1,10 @@
 {
   "vuelidate-rules": {},
+  "filters": {
+    "thousandsDelimeter": ",",
+    "currencySymbol": "$",
+    "decimalDelimeter": ".",
+    "momentLocale": "es"
+  },
   "nequ-components": {}
 }

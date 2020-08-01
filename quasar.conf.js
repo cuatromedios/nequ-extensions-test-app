@@ -6,7 +6,7 @@ module.exports = function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
-    boot: [ ],
+    boot: [ 'codeHighlight' ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
     css: [
@@ -45,7 +45,7 @@ module.exports = function (ctx) {
       directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [ 'Notify' ]
     },
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie
@@ -89,9 +89,9 @@ module.exports = function (ctx) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'Quasar App',
-        short_name: 'Quasar App',
-        description: 'A Quasar Framework app',
+        name: 'NeQu Components documentation',
+        short_name: 'NeQu Components',
+        description: 'NeQu Components documentation with samples',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
